@@ -4,7 +4,6 @@ function App() {
   return (
     <React.Fragment>
       <Layout>
-        Hello
       </Layout>
     </React.Fragment>
   );

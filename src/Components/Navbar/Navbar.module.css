@@ -1,0 +1,107 @@
+.Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20vh;
+  width: 100%;
+  padding: 10px 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+}
+
+.Container .Logo {
+  width: 150px;
+}
+
+.Container .Menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Container .Menu .MenuItem {
+  padding: 4px 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  margin: 0px 10px;
+}
+
+.Container .Menu .MenuItem img {
+  width: 60px;
+}
+
+.Container .Menu .MenuItem .ResultsIcon {
+  width: 35px;
+}
+
+.Container .Menu .MenuItem span {
+  font-weight: 500;
+  font-size: 0rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  margin-left: 10px;
+}
+
+.Container .Menu .MenuItem:hover {
+  background-color: #d62839;
+  cursor: pointer;
+}
+
+.Container .Menu .MenuItem:hover span {
+  font-size: 1rem;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.Container .ButtonDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.Container .ButtonDiv .LoginButton {
+  font-size: 1.2rem;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  margin-right: 50px;
+}
+
+.Container .ButtonDiv .SignUpButton {
+  padding: 8px 35px;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  background-color: #d62839;
+  font-weight: 600;
+}
+
+.Container .ButtonDiv button:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=Navbar.module.css.map */
