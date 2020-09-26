@@ -118,5 +118,29 @@
 }
 
 .parent .right_content .right_box {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    width: 70%;
+    /* background-color: red; */
+    justify-content: center;
+}
+
+.parent .right_content .right_box .contest_display p{
+    font-family: Saira;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 66px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    margin-left: 10px;
 
 }
+
+.parent .right_content .right_box .contest_display img {
+    height: 100%;
+}
+
+

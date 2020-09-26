@@ -3,6 +3,7 @@ import styles from './LandingPage.module.css';
 import Layout from '../Layout/Layout';
 import practiceLogo from '../../assets/practice_icon.png';
 import trophyLogo from '../../assets/trophy.png';
+import demoRight from '../../assets/demoright.png';
 
 
 function LandingPage() {
@@ -29,9 +30,12 @@ function LandingPage() {
                         </div>
                     </div>
                 </div>
-                <div className = {styles.right_conent}>
+                <div className = {styles.right_content}>
                     <div className = {styles.right_box}>
-                        
+                        <div className = {styles.contest_display}>
+                            <p>Trending challenges</p>
+                            <img src={demoRight} alt=""/>
+                        </div>
                     </div>
                 </div>
             </div>
