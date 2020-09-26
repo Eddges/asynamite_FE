@@ -1,7 +1,12 @@
 import React from 'react';
+import Layout from './Components/Layout/Layout';
 function App() {
   return (
-    <div>Asynamite</div>
+    <React.Fragment>
+      <Layout>
+        Hello
+      </Layout>
+    </React.Fragment>
   );
 }
 
