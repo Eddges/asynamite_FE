@@ -1,0 +1,122 @@
+.parent {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+.parent .left_content {
+    display: flex;
+    flex-basis: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent .left_content .left_box {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 40%;
+    /* background-color: red; */
+    
+}
+
+.parent .left_content .left_box .heading {
+    font-family: Saira;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 55px;
+    letter-spacing: 1px;
+    text-align: left;
+    color: white;
+
+}
+
+.parent .left_content .left_box span {
+    background-color: rgb(48, 48, 214);
+    padding: 2px;
+    
+}
+
+.parent .left_content .left_box .text_wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.parent .left_content .left_box .text {
+    font-family: Saira;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #ffffff;
+
+}
+
+.parent .left_content .left_box .point_wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    width: 100%;
+    margin-top: 50px;
+    /* justify-content: space-between; */
+
+}
+
+.parent .left_content .left_box .point_wrapper .practice_wrapper {
+    display: flex;
+    height: 50px;
+    width: 180px;
+    border: 1px solid #ffffff;
+    align-items: center;
+    color: #ffffff;
+    justify-content: space-between;
+}
+
+.parent .left_content .left_box .point_wrapper .practice_wrapper p {
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.parent .left_content .left_box .point_wrapper .practice_wrapper img {
+    height: 60%;
+    margin-right: 20px;
+}
+
+.parent .left_content .left_box .point_wrapper .contest_wrapper {
+    display: flex;
+    height: 50px;
+    width: 180px;
+    background-color: #D62839;
+    margin-left: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.parent .left_content .left_box .point_wrapper .contest_wrapper p {
+    padding-left: 20px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.parent .left_content .left_box .point_wrapper .contest_wrapper img {
+    height: 60%;
+    margin-right: 20px;
+}
+
+.parent .right_content {
+    display: flex;
+    flex-basis: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent .right_content .right_box {
+
+}

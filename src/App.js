@@ -1,11 +1,13 @@
 import React from 'react';
-import Layout from './Components/Layout/Layout';
+import LandingPage from './Components/LandingPage/LandingPage.component';
+
+
 function App() {
   return (
     <React.Fragment>
-      <Layout>
-        Hello
-      </Layout>
+    
+        <LandingPage/>
+      
     </React.Fragment>
   );
 }
