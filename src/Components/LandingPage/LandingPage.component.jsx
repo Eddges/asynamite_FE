@@ -4,6 +4,7 @@ import Layout from '../Layout/Layout';
 import practiceLogo from '../../assets/practice_icon.png';
 import trophyLogo from '../../assets/Trophy.png';
 import demoRight from '../../assets/demoright.png';
+import {NavLink} from 'react-router-dom';
 
 
 function LandingPage() {
@@ -19,14 +20,17 @@ function LandingPage() {
                         </div>
 
                         <div className = {styles.point_wrapper}>
-                            <div className = {styles.practice_wrapper}>
-                                <p>PRACTICE</p>
-                                <img src={practiceLogo} alt=""/>
-                            </div>
-                            <div className = {styles.contest_wrapper}>
-                                <p>CONTESTS</p>
+                            <NavLink to = '/practice' style = {{textDecoration:'none'}}>
+                                <div className = {styles.practice_wrapper}>
+                                    <p>PRACTICE</p>
+                                    <img src={practiceLogo} alt=""/>
+                                </div>
+                            </NavLink>
+                            
+                            <NavLink style = {{textDecoration:'none'}} to = '/contests'> <div className = {styles.contest_wrapper}>
+                               <p>CONTESTS</p>
                                 <img src={trophyLogo} alt=""/>
-                            </div>
+                            </div></NavLink>
                         </div>
                     </div>
                 </div>

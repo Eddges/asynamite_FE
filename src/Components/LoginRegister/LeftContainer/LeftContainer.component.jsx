@@ -19,7 +19,7 @@ function LeftContent({ question, btnTitle, routeTitle}){
                                  <p> {question} </p>
                                 
                              </div>
-                             <NavLink to = {routeTitle} ><div className = {styles.signup_wrapper}>
+                             <NavLink to = {routeTitle} style = {{textDecoration:'none'}} ><div className = {styles.signup_wrapper}>
                                <p> {btnTitle} </p>
                                
                              </div></NavLink> 
