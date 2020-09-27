@@ -1,0 +1,146 @@
+.Container {
+  width: 100%;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 80px;
+  padding-bottom: 10px;
+  overflow-y: auto;
+}
+
+.Container .Bar {
+  width: 80%;
+  min-height: 80px;
+  background-color: #0e30d6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 30px;
+}
+
+.Container .Bar .Search {
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Container .Bar .Search input {
+  width: 280px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid #043c7024;
+  border-radius: 5px;
+  color: #3d3d3d;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0px 45px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("../../assets/Search.png");
+  background-position: left 15px top 50%;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.Container .Bar .Search input:hover, .Container .Bar .Search input:focus {
+  background-color: #ededede5;
+}
+
+.Container .Bar .Controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Container .Bar .Controls .SelectBorder {
+  border: solid 2px white;
+  background-color: transparent;
+  border-radius: 3px;
+  padding: 3px 20px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0px 8px;
+}
+
+.Container .Bar .Controls .SelectBG {
+  border: none;
+  background-color: transparent;
+  border-radius: 3px;
+  padding: 7px 20px;
+  color: #0e30d6;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0px 8px;
+  background-color: white;
+}
+
+.Container .Headings {
+  width: 80%;
+  min-height: 80px;
+  background-color: #0e30d666;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  font-weight: 600;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 80px;
+}
+
+.Container .Headings span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Container .Headings .Hash {
+  width: 15%;
+}
+
+.Container .Headings .Title {
+  width: 40%;
+}
+
+.Container .Headings .Difficulty {
+  width: 20%;
+}
+
+.Container .Headings .CL {
+  width: 25%;
+}
+
+.Container .PracticeList {
+  width: 80%;
+}
+/*# sourceMappingURL=Practice.module.css.map */

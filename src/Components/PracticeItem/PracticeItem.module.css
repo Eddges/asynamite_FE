@@ -1,0 +1,69 @@
+.Container {
+  width: 100%;
+  background-color: #0e30d666;
+  margin-top: 10px;
+  padding: 15px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  font-weight: 400;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 80px;
+}
+
+.Container span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Container .Hash {
+  width: 15%;
+}
+
+.Container .Title {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Container .Title span {
+  background-color: #0e30d6;
+  border-radius: 5px;
+  padding: 2px 15px;
+}
+
+.Container .Difficulty {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Container .Difficulty span {
+  background-color: #4bc022;
+  border-radius: 5px;
+  padding: 2px 15px;
+}
+
+.Container .CL {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.8rem;
+}
+
+.Container .CL span {
+  background-color: #D62839;
+  border-radius: 5px;
+  padding: 4px 15px;
+}
+/*# sourceMappingURL=PracticeItem.module.css.map */

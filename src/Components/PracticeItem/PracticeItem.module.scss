@@ -1,0 +1,47 @@
+.Container{
+    width : 100%;
+    // height : 80px;
+    background-color: #0e30d666;
+    margin-top : 10px;
+    padding : 15px 0px;
+    display : flex;
+    color : white;
+    font-weight: 400;
+    align-items: center;
+    padding-left : 80px;
+    span{
+        display: flex;
+        align-items: center;
+    }
+    .Hash{
+        width : 15%;
+    }
+    .Title{
+        width : 40%;
+        display : flex;
+        span{
+            background-color: #0e30d6;
+            border-radius: 5px;
+            padding : 2px 15px;
+        }
+    }
+    .Difficulty{
+        width : 20%;
+        display : flex;
+        span{
+            background-color: #4bc022;
+            border-radius: 5px;
+            padding : 2px 15px;
+        }
+    }
+    .CL{
+        width : 25%;
+        display : flex;
+        font-size : 0.8rem;
+        span{
+            background-color: #D62839;
+            border-radius: 5px;
+            padding : 4px 15px;
+        }
+    }
+}
