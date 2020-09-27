@@ -197,9 +197,12 @@
     margin-left: 30px;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
 
 .parent .left_content .left_box .point_wrapper .signup_wrapper p {
     font-size: 18px;
     color: #ffffff;
+    text-decoration: none;
+    
 }

@@ -36,8 +36,8 @@ class Navbar extends React.Component{
                     </NavLink>
                 </div>
                 <div className={classes.ButtonDiv}>
-                    <button className={classes.LoginButton}>Login</button>
-                    <button className={classes.SignUpButton}>Sign Up</button>
+                    <NavLink to = '/login'><button className={classes.LoginButton}>Login</button></NavLink> 
+                    <NavLink to = '/register'><button className={classes.SignUpButton}>Sign Up</button></NavLink> 
                 </div>
             </div>
         )
