@@ -6,7 +6,7 @@ function LeftContent({ question, btnTitle, routeTitle}){
     return(
         <>
         <div className = {styles.left_content}>
-                     <div className = {styles.left_box}>
+                    <div className = {styles.left_box}>
                          <p className = {styles.heading}>Become a true programming master</p>
                          <div className = {styles.text_wrapper}>
                              <p className = {styles.text}>Become a better developer</p>
@@ -14,18 +14,15 @@ function LeftContent({ question, btnTitle, routeTitle}){
  
  
                          
-                     <div className = {styles.point_wrapper}>
-                             <div className = {styles.question_wrapper}>
-                                 <p> {question} </p>
-                                
-                             </div>
-                             <NavLink to = {routeTitle} style = {{textDecoration:'none'}} ><div className = {styles.signup_wrapper}>
-                               <p> {btnTitle} </p>
-                               
-                             </div></NavLink> 
-                     </div>
-                     </div>
- 
+                        <div className = {styles.point_wrapper}>
+                            <div className = {styles.question_wrapper}>
+                                <p> {question} </p>
+                            </div>
+                            <NavLink to = {routeTitle} style = {{textDecoration:'none'}} ><div className = {styles.signup_wrapper}>
+                                <p> {btnTitle} </p>
+                            </div></NavLink> 
+                        </div>
+                    </div>
         </div>
         </>
     )
