@@ -14,7 +14,7 @@ class Navbar extends React.Component{
             <div className={classes.Container}>
                 <img className={classes.Logo} src={Logo} alt="Logo" />
                 <div className={classes.Menu}>
-                    <NavLink to="/" className={classes.MenuItem} activeClassName={classes.Active}>
+                    <NavLink to="/home" className={classes.MenuItem} activeClassName={classes.Active}>
                         <span>HOME</span>
                         <img src={HomeLogo} alt="Home" />
                     </NavLink>
@@ -22,18 +22,18 @@ class Navbar extends React.Component{
                         <span>CONTESTS</span>
                         <img src={Trophy} alt="Contests" className={classes.ResultsIcon} />
                     </NavLink>
-                    <div className={classes.MenuItem}>
+                    <NavLink to="/practice" className={classes.MenuItem} activeClassName={classes.Active}>
                         <span>PRACTICE</span>
                         <img src={Command} alt="Practice" />
-                    </div>
-                    <div className={classes.MenuItem}>
+                    </NavLink>
+                    <NavLink to="/dashboard" className={classes.MenuItem} activeClassName={classes.Active}>
                         <span>DASHBOARD</span>
                         <img src={Dashboard} alt="Dashboard" />
-                    </div>
-                    <div className={classes.MenuItem}>
+                    </NavLink>
+                    <NavLink to="/results" className={classes.MenuItem} activeClassName={classes.Active}>
                         <span>RESULTS</span>
                         <img src={Result} alt="Result" />
-                    </div>
+                    </NavLink>
                 </div>
                 <div className={classes.ButtonDiv}>
                     <button className={classes.LoginButton}>Login</button>
