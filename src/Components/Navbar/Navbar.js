@@ -14,7 +14,7 @@ class Navbar extends React.Component{
             <div className={classes.Container}>
                 <img className={classes.Logo} src={Logo} alt="Logo" />
                 <div className={classes.Menu}>
-                    <NavLink to="/home" className={classes.MenuItem} activeClassName={classes.Active}>
+                    <NavLink to="/" exact className={classes.MenuItem} activeClassName={classes.Active}>
                         <span>HOME</span>
                         <img src={HomeLogo} alt="Home" />
                     </NavLink>
@@ -36,8 +36,8 @@ class Navbar extends React.Component{
                     </NavLink>
                 </div>
                 <div className={classes.ButtonDiv}>
-                    <button className={classes.LoginButton}>Login</button>
-                    <button className={classes.SignUpButton}>Sign Up</button>
+                    <NavLink to = '/login'><button className={classes.LoginButton}>Login</button></NavLink> 
+                    <NavLink to = '/register'><button className={classes.SignUpButton}>Sign Up</button></NavLink> 
                 </div>
             </div>
         )

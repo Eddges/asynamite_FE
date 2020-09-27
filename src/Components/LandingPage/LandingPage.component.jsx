@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './LandingPage.module.css';
 import Layout from '../Layout/Layout';
 import practiceLogo from '../../assets/practice_icon.png';
-import trophyLogo from '../../assets/trophy.png';
+import trophyLogo from '../../assets/Trophy.png';
 import demoRight from '../../assets/demoright.png';
 
 
