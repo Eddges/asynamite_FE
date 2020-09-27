@@ -1,0 +1,81 @@
+.Container{
+    display : flex;
+    align-items: center;
+    height : 20vh;
+    width : 100%;
+    padding : 10px 50px;
+    justify-content: space-between;
+    color : white;
+    .Logo{
+        width : 150px;
+    }
+    .Menu{
+        display : flex;
+        align-items: center;
+        justify-content: center;
+        .MenuItem{
+            padding : 4px 8px;
+            display: flex;
+            align-items: center;
+            transition : all 0.2s;
+            position : relative;
+            margin : 0px 10px;
+            text-decoration: none;
+            color : white;
+            img{
+                width : 60px;
+            }
+            .ResultsIcon{
+                width : 35px;
+            }
+            span{
+                font-weight: 500;
+                font-size : 0rem;
+                transition : all 0.2s;
+                transform: translateX(50px);
+                margin-left : 10px;
+            }
+            &:hover{
+                background-color: #d62839;
+                cursor: pointer;
+                span{
+                    font-size : 1rem;
+                    transform: translateX(0px);
+                }
+            }
+        }
+        .Active{
+            background-color: #d62839;
+            span{
+                font-size : 1rem;
+                transform: translateX(0px);
+            }
+        }
+    }
+    .ButtonDiv{
+        display : flex;
+        align-items: center;
+        height : 100%;
+        .LoginButton{
+            font-size : 1.2rem;
+            border : none;
+            background-color: transparent;
+            color : white;
+            font-weight: 600;
+            margin-right : 50px;
+        }
+        .SignUpButton{
+            padding : 8px 35px;
+            font-size : 1rem;
+            color : white;
+            border : none;
+            background-color: #d62839;
+            font-weight: 600;
+        }
+        button{
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}

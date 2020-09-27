@@ -20,11 +20,11 @@ function LandingPage() {
 
                         <div className = {styles.point_wrapper}>
                             <div className = {styles.practice_wrapper}>
-                                <p>Practice</p>
+                                <p>PRACTICE</p>
                                 <img src={practiceLogo} alt=""/>
                             </div>
                             <div className = {styles.contest_wrapper}>
-                                <p>Contest</p>
+                                <p>CONTESTS</p>
                                 <img src={trophyLogo} alt=""/>
                             </div>
                         </div>
