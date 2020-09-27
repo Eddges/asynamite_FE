@@ -8,15 +8,9 @@ import SignInPage from './Components/SignInPage/signin.component';
 const App = () => {
   return (
     <React.Fragment>
-<<<<<<< HEAD
-    
-        {/* <LandingPage/> */}
-        <SignInPage/>
-=======
       <Route path="/home" exact render={() => <LandingPage />} />
       <Route path="/contests" exact render={() => <Contests />} />
       
->>>>>>> 0dda82899c04c5a162a7fcfc28f5f70baa09b028
       
     </React.Fragment>
   );
