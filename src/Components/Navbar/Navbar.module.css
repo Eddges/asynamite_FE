@@ -42,6 +42,8 @@
   transition: all 0.2s;
   position: relative;
   margin: 0px 10px;
+  text-decoration: none;
+  color: white;
 }
 
 .Container .Menu .MenuItem img {
@@ -68,6 +70,16 @@
 }
 
 .Container .Menu .MenuItem:hover span {
+  font-size: 1rem;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.Container .Menu .Active {
+  background-color: #d62839;
+}
+
+.Container .Menu .Active span {
   font-size: 1rem;
   -webkit-transform: translateX(0px);
           transform: translateX(0px);

@@ -20,6 +20,8 @@
             transition : all 0.2s;
             position : relative;
             margin : 0px 10px;
+            text-decoration: none;
+            color : white;
             img{
                 width : 60px;
             }
@@ -40,6 +42,13 @@
                     font-size : 1rem;
                     transform: translateX(0px);
                 }
+            }
+        }
+        .Active{
+            background-color: #d62839;
+            span{
+                font-size : 1rem;
+                transform: translateX(0px);
             }
         }
     }

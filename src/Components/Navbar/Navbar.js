@@ -6,6 +6,7 @@ import Command from '../../assets/Command.png'
 import Dashboard from '../../assets/Dashboard.png'
 import Result from '../../assets/Result.png'
 import Trophy from '../../assets/Trophy.png'
+import { NavLink } from 'react-router-dom'
 
 class Navbar extends React.Component{
     render(){
@@ -13,14 +14,14 @@ class Navbar extends React.Component{
             <div className={classes.Container}>
                 <img className={classes.Logo} src={Logo} alt="Logo" />
                 <div className={classes.Menu}>
-                    <div className={classes.MenuItem}>
+                    <NavLink to="/" className={classes.MenuItem} activeClassName={classes.Active}>
                         <span>HOME</span>
                         <img src={HomeLogo} alt="Home" />
-                    </div>
-                    <div className={classes.MenuItem}>
+                    </NavLink>
+                    <NavLink to="/contests" className={classes.MenuItem} activeClassName={classes.Active}>
                         <span>CONTESTS</span>
                         <img src={Trophy} alt="Contests" className={classes.ResultsIcon} />
-                    </div>
+                    </NavLink>
                     <div className={classes.MenuItem}>
                         <span>PRACTICE</span>
                         <img src={Command} alt="Practice" />
