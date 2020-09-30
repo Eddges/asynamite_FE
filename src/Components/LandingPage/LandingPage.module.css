@@ -119,14 +119,14 @@
 
 .parent .right_content .right_box {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 50%;
     width: 70%;
     /* background-color: red; */
     justify-content: center;
 }
 
-.parent .right_content .right_box .contest_display p{
+.parent .right_content .right_box  p{
     font-family: Saira;
     font-size: 30px;
     font-style: normal;
@@ -139,8 +139,108 @@
 
 }
 
-.parent .right_content .right_box .contest_display img {
-    height: 100%;
+.parent .right_content .right_box  img {
+    height: 300px;
+    width: 400px;
+}
+
+@media (max-width: 760px) {
+
+    .parent {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .parent .left_content {
+        display: flex;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .parent .left_content .left_box {
+        width: 90%;
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        /* background-color: red; */
+        
+    }
+
+    .parent .left_content .left_box .point_wrapper .practice_wrapper {
+        height: 40px;
+        width: 120px;
+    }
+    
+    .parent .left_content .left_box .point_wrapper .practice_wrapper p {
+        padding-left: 10px;
+        font-size: 15px;
+        /* margin-right: 2px; */
+    }
+    
+    .parent .left_content .left_box .point_wrapper .practice_wrapper img {
+        height: 60%;
+        margin-right: 20px;
+        margin-left: 5px;
+    }
+    
+    .parent .left_content .left_box .point_wrapper .contest_wrapper {
+        display: flex;
+        height: 40px;
+        width: 120px;
+    }
+    
+    .parent .left_content .left_box .point_wrapper .contest_wrapper p {
+        padding-left: 10px;
+        font-size: 15px;
+        color: #ffffff;
+    }
+    
+    .parent .left_content .left_box .point_wrapper .contest_wrapper img {
+        height: 60%;
+        margin-right: 20px;
+    }
+
+
+    .parent .right_content {
+        width: 100%;
+        height: auto;
+    }
+
+    .parent .right_content .right_box {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        /* background-color: red; */
+        justify-content: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+    .parent .right_content .right_box  p{
+        font-family: Saira;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 66px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: white;
+        margin-left: 15px;
+    
+    }
+
+
+    .parent .right_content .right_box img {
+        height: 200px;
+        width: 250px;
+        padding-bottom: 20px;
+       
+    
+    }
 }
 
 

@@ -36,10 +36,10 @@ function LandingPage() {
                 </div>
                 <div className = {styles.right_content}>
                     <div className = {styles.right_box}>
-                        <div className = {styles.contest_display}>
+                        {/* <div className = {styles.contest_display}> */}
                             <p>Trending challenges</p>
                             <img src={demoRight} alt=""/>
-                        </div>
+                        {/* </div> */}
                     </div>
                 </div>
             </div>
