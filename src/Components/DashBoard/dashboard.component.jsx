@@ -22,7 +22,8 @@ function Dashboard() {
                 {/* user data section like insights, achievements */}
                 <div className = {styles.user_data}>
                     <div className = {styles.user_data_content}>
-
+                        <UserElement title = "Insights"/>
+                        <UserElement title = "Achievements"/>
                     </div>
                 </div>
                 {/* interview schedule section */}
@@ -40,6 +41,20 @@ function Dashboard() {
 
             </div>
         </Layout>
+    )
+}
+
+function UserElement({title}) {
+    return(
+        <div className = {styles.insights}>
+            <div className = {styles.header}>
+                <p> {title} </p>
+            </div>
+
+            <div className = {styles.data}>
+                {/* data from api */}
+            </div>
+        </div>
     )
 }
 
