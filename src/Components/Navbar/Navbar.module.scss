@@ -52,6 +52,9 @@
             }
         }
     }
+    .MenuMobile{
+        display : none;
+    }
     .ButtonDiv{
         display : flex;
         align-items: center;
@@ -75,6 +78,81 @@
         button{
             &:hover{
                 cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+@media(max-width : 576px) {
+    .Container{
+        // overflow: hidden;
+        height : auto;
+        padding : 25px 20px;
+        .Logo{
+            width : 100px;
+        }
+        .Menu{
+            display : none;
+        }
+        .MenuMobile{
+            display : flex;
+            align-items: center;
+            justify-content: space-between;
+            position : fixed;
+            bottom : 0px;
+            left : 0px;
+            width : 100%;
+            background-color: #05114b;
+            .MenuItem{
+                padding : 2px 2px;
+                display: flex;
+                align-items: center;
+                transition : all 0.2s;
+                position : relative;
+                margin : 0px 4px;
+                text-decoration: none;
+                color : white;
+                img{
+                    width : 40px;
+                }
+                .ResultsIcon{
+                    width : 15px;
+                }
+                span{
+                    font-weight: 500;
+                    font-size : 0rem;
+                    transition : all 0.2s;
+                    transform: translateX(50px);
+                    margin-left : 10px;
+                }
+                &:hover{
+                    background-color: #d62839;
+                    cursor: pointer;
+                    span{
+                        font-size : 0.6rem;
+                        transform: translateX(0px);
+                    }
+                }
+            }
+            .Active{
+                background-color: #d62839;
+                span{
+                    font-size : 0.6rem;
+                    transform: translateX(0px);
+                }
+            }
+        }
+        .ButtonDiv{
+            padding : 0px;
+            margin : 0px;
+            .LoginButton{
+                margin-right: 15px;
+                font-size : 0.8rem;
+            }
+            .SignUpButton{
+                font-size: 0.8rem;
             }
         }
     }

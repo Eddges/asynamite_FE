@@ -85,6 +85,10 @@
           transform: translateX(0px);
 }
 
+.Container .MenuMobile {
+  display: none;
+}
+
 .Container .ButtonDiv {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -115,5 +119,92 @@
 
 .Container .ButtonDiv button:hover {
   cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .Container {
+    height: auto;
+    padding: 25px 20px;
+  }
+  .Container .Logo {
+    width: 100px;
+  }
+  .Container .Menu {
+    display: none;
+  }
+  .Container .MenuMobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: #05114b;
+  }
+  .Container .MenuMobile .MenuItem {
+    padding: 2px 2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    position: relative;
+    margin: 0px 4px;
+    text-decoration: none;
+    color: white;
+  }
+  .Container .MenuMobile .MenuItem img {
+    width: 40px;
+  }
+  .Container .MenuMobile .MenuItem .ResultsIcon {
+    width: 15px;
+  }
+  .Container .MenuMobile .MenuItem span {
+    font-weight: 500;
+    font-size: 0rem;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+    margin-left: 10px;
+  }
+  .Container .MenuMobile .MenuItem:hover {
+    background-color: #d62839;
+    cursor: pointer;
+  }
+  .Container .MenuMobile .MenuItem:hover span {
+    font-size: 0.6rem;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  .Container .MenuMobile .Active {
+    background-color: #d62839;
+  }
+  .Container .MenuMobile .Active span {
+    font-size: 0.6rem;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  .Container .ButtonDiv {
+    padding: 0px;
+    margin: 0px;
+  }
+  .Container .ButtonDiv .LoginButton {
+    margin-right: 15px;
+    font-size: 0.8rem;
+  }
+  .Container .ButtonDiv .SignUpButton {
+    font-size: 0.8rem;
+  }
 }
 /*# sourceMappingURL=Navbar.module.css.map */

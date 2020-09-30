@@ -11,4 +11,10 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
+@media (max-width: 576px) {
+  .Container {
+    height: auto;
+  }
+}
 /*# sourceMappingURL=Layout.module.css.map */

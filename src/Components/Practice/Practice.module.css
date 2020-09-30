@@ -87,6 +87,10 @@
   margin: 0px 8px;
 }
 
+.Container .Bar .Controls .SelectBorder option {
+  color: #0e30d6;
+}
+
 .Container .Bar .Controls .SelectBG {
   border: none;
   background-color: transparent;
