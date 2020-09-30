@@ -1,0 +1,123 @@
+.parent {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.parent .profile_section{
+    display: flex;
+    flex-basis: 20%;
+    height: 100%;
+    /* background-color: red; */
+    justify-content: center;
+    align-items: center;
+}
+
+.parent .profile_section .profile_content {
+    display: flex;
+    flex-direction: column ;
+    height: 90%;
+    width: 90%;
+    background-color: rgba(14, 48, 214, 0.5);
+
+}
+
+.parent .profile_section .profile_content .profile {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.parent .profile_section .profile_content .profile img {
+    height: 50%;
+    margin-top: -50%;
+}
+
+.parent .profile_section .profile_content .profile .name {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    margin-top: 10px;
+}
+
+.parent .profile_section .profile_content .profile .desig {
+    font-size: 10px;
+    font-weight: 400;
+    color: white;
+    margin-top: 20px;
+}
+
+.parent .profile_section .profile_content .profile button {
+    border: none;
+    background-color: rgba(14, 48, 214, 1);
+    width: 60px;
+    height: 30px;
+    color: white;
+    margin-top: 10px;
+    font-size: 15px;
+
+}
+
+
+.parent .user_data {
+    display: flex;
+    flex-basis: 60%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+
+}
+
+.parent .user_data .user_data_content {
+    display: flex;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(14, 48, 214, 0.5);
+
+}
+
+.parent .schedule_section {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20%;
+    height: 100%;
+    justify-content: center;
+    align-items: start;
+}
+
+.parent .schedule_section .schedule_section_content {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 90%;
+    /* background-color: rgba(14, 48, 214, 0.5); */
+    
+
+}
+
+.parent .schedule_section .schedule_section_content .header {
+    display: flex;
+    width: 100%;
+    height: 35px;
+    background-color: rgba(14, 48, 214) ;
+    justify-content: center;
+}
+
+.parent .schedule_section .schedule_section_content .header p{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.parent .schedule_section .schedule_section_content .data {
+    width: 100%;
+    height: 300px;
+    background-color: rgba(14, 48, 214, 0.5) ;
+    margin-top: 10px;
+}
