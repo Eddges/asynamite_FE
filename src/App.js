@@ -7,6 +7,7 @@ import Practice from './Components/Practice/Practice';
 import SignInPage from './Components/LoginRegister/Login/signin.component';
 import Register from './Components/LoginRegister/Register/register.component';
 import Results from './Components/Result/result.component';
+import Dashboard from './Components/DashBoard/dashboard.component';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Route path="/login" exact render={() => <SignInPage />} />
       <Route path="/register" exact render={() =>  <Register/> } />
       <Route path="/results" exact render={() =>  <Results/> } />
+      <Route path="/dashboard" exact render={() =>  <Dashboard/> } />
     </React.Fragment>
   );
 }
