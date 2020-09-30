@@ -53,3 +53,37 @@
         }
     }
 }
+
+
+
+@media(max-width : 576px) {
+    .Container{
+        height : auto;
+        min-height: 100vh;
+        padding-bottom : 100px;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: flex-start;
+        .Switch{
+            width : 100%;
+            align-items: center;
+            justify-content: center;
+            margin : 0px;
+            padding : 0px;
+            margin-top : 30px;
+        }
+        .Cards{
+            width : 100%;
+            .MainActive{
+                flex-direction: column;
+                .Highlighted{
+                    width : 85%;
+                    margin-top : 20px;
+                }
+                .List{
+                    width : 80%;
+                }
+            }
+        }
+    }
+}

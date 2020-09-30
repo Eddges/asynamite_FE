@@ -100,3 +100,53 @@
         width : 80%;
     }
 }
+
+
+@media(max-width : 576px) {
+    .Container{
+        padding : 20px 0px;
+        min-height: 100vh;
+        padding-bottom : 100px;
+        .Bar{
+            height : auto;
+            flex-wrap: wrap;
+            padding : 10px 10px;
+            justify-content: center;
+            align-items: center;
+            width : 90%;
+            border-radius: 5px;
+            min-height: auto;
+            .Search{
+                // width : 100%;
+                margin-left : 0px;
+                margin : 0px;
+                padding : 0px 0px;
+            }
+            .Controls{
+                margin-top : 10px;
+                justify-content: space-between;
+                .SelectBorder{
+                    margin : 0px;
+                    padding : 0px;
+                    font-size : 0.8rem;
+                    margin : 5px;
+                }
+                .SelectBG{
+                    margin : 5px;
+                    padding : 3px;
+                    font-size : 0.8rem;
+                }
+            }
+        }
+        .Headings{
+            display : none;
+        }
+        .PracticeList{
+            width : 100%;
+            padding : 10px;
+            min-height: auto;
+            height : auto;
+            flex-wrap: wrap;
+        }
+    }
+}

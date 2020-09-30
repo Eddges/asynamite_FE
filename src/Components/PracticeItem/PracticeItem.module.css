@@ -66,4 +66,51 @@
   border-radius: 5px;
   padding: 4px 15px;
 }
+
+@media (max-width: 576px) {
+  .Container {
+    padding: 15px 0px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-top: 15px;
+  }
+  .Container .Hash {
+    display: none;
+  }
+  .Container .Title {
+    width: 90%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .Container .Title span {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 10px 5px;
+  }
+  .Container .Difficulty {
+    width: auto;
+    margin-top: 10px;
+  }
+  .Container .CL {
+    width: auto;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}
 /*# sourceMappingURL=PracticeItem.module.css.map */
