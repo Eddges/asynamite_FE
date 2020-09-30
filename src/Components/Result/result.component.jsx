@@ -2,11 +2,13 @@ import React from 'react';
 import styles from './results.module.css';
 import Layout from '../Layout/Layout';
 import resultCard from '../../assets/resultcard.png';
+import Navbar from '../Navbar/Navbar';
 
 
 function Results() {
     return (
         <Layout>
+       
             <div className = {styles.parent}>
                 <div className = {styles.header_container}>
                     <p className = {styles.heading}> Recent Contests</p>
