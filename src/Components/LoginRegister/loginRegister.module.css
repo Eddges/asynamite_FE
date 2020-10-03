@@ -172,6 +172,10 @@
     margin-top: 30px;
 }
 
+.parent .right_content .right_box .right_content_box .form_area form button:hover{
+    cursor: pointer;
+}
+
 
 
 .parent .left_content .left_box .point_wrapper {

@@ -2,9 +2,14 @@ import React from 'react'
 import Layout from '../Layout/Layout'
 import PracticeItem from '../PracticeItem/PracticeItem'
 import classes from './Practice.module.css'
+import axios from 'axios'
 
 class Practice extends React.Component{
     state = null
+
+    componentDidMount() {
+        
+    }
     
     render(){
         return(
