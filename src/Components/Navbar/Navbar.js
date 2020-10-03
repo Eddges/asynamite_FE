@@ -9,13 +9,19 @@ import Trophy from '../../assets/Trophy.png'
 import { NavLink } from 'react-router-dom'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
+import axios from 'axios'
 
 class Navbar extends React.Component{
-    state = {
-        token : this.props.user.token
+
+    signOutHandler = () => {
+        this.props.handleSignOut()
+        localStorage.removeItem('userName')
+        localStorage.removeItem('email')
+        localStorage.removeItem('phone')
+        localStorage.removeItem('userId')
+        localStorage.removeItem('token')
     }
     render(){
-        console.log(this.state.token)
         return(
             <div className={classes.Container}>
                 <img className={classes.Logo} src={Logo} alt="Logo" />
@@ -64,7 +70,7 @@ class Navbar extends React.Component{
                     </NavLink>
                 </div>
                 {
-                    this.state.token
+                    this.props.user.token
                         ? 
                     <div className={classes.ButtonDiv}>
                         <button className={classes.SignUpButton} onClick={this.signOutHandler}>Sign Out</button>

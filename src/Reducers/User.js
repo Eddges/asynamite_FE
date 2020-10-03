@@ -18,6 +18,16 @@ const User = (state = initialState, action) => {
                 phone : action.payload.phone,
                 token : action.payload.token
             }
+        case 'HANDLE_SIGNOUT' : 
+            console.log('Signing out')
+            return{
+                ...state,
+                userName : null,
+                email : null,
+                userId : null,
+                phone : null,
+                token : null
+            }
     }
     return state
 }
