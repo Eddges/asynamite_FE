@@ -7,9 +7,15 @@ import Dashboard from '../../assets/Dashboard.png'
 import Result from '../../assets/Result.png'
 import Trophy from '../../assets/Trophy.png'
 import { NavLink } from 'react-router-dom'
+import {connect} from 'react-redux'
+import {withRouter} from 'react-router-dom'
 
 class Navbar extends React.Component{
+    state = {
+        token : this.props.user.token
+    }
     render(){
+        console.log(this.state.token)
         return(
             <div className={classes.Container}>
                 <img className={classes.Logo} src={Logo} alt="Logo" />
@@ -57,13 +63,38 @@ class Navbar extends React.Component{
                         <img src={Result} alt="Result" />
                     </NavLink>
                 </div>
-                <div className={classes.ButtonDiv}>
-                    <NavLink to = '/login'><button className={classes.LoginButton}>Login</button></NavLink> 
-                    <NavLink to = '/register'><button className={classes.SignUpButton}>Sign Up</button></NavLink> 
-                </div>
+                {
+                    this.state.token
+                        ? 
+                    <div className={classes.ButtonDiv}>
+                        <button className={classes.SignUpButton} onClick={this.signOutHandler}>Sign Out</button>
+                    </div>
+                        :
+                    <div className={classes.ButtonDiv}>
+                        <NavLink to = '/login'><button className={classes.LoginButton}>Login</button></NavLink> 
+                        <NavLink to = '/register'><button className={classes.SignUpButton}>Sign Up</button></NavLink> 
+                    </div>
+                }
+                
+                    
+
             </div>
         )
     }
 }
 
-export default Navbar
+const mapStateToProps = state => {
+    return {
+        user : state.usr
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return{
+        handleSignOut : () => dispatch({
+            type : 'HANDLE_SIGNOUT'
+        })
+    }
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Navbar))

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '../loginRegister.module.css';
 import axios from 'axios'
 import {connect} from 'react-redux'
+import {withRouter} from 'react-router-dom'
 
 class LoginForm extends React.Component {
 
@@ -44,9 +45,11 @@ class LoginForm extends React.Component {
                 userId : res.data.user.id,
                 token : res.data.token
             })
+            this.props.history.push('/')
         })
         .catch(err => alert(err))
     }
+
 
     render(){
         return (
@@ -83,4 +86,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(LoginForm)
+export default withRouter(connect(null, mapDispatchToProps)(LoginForm))

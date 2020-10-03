@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '../loginRegister.module.css';
 import {connect} from 'react-redux'
 import axios from 'axios'
+import {withRouter} from 'react-router-dom'
 
 class RegisterForm extends React.Component{
 
@@ -80,6 +81,7 @@ class RegisterForm extends React.Component{
                 email : res.data.user.email,
                 token : res.data.token
             })
+            this.props.history.push('/')
         })
     }
     render(){
@@ -127,4 +129,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(RegisterForm)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(RegisterForm))
