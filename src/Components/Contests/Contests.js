@@ -23,6 +23,10 @@ class Contests extends React.Component {
 
         }).then(function(response){
             console.log(response.data[0]);
+        }).catch(function(error){
+            console.log(error)
+        }).then(function(){
+            console.log('yes');
         })
     }
 
