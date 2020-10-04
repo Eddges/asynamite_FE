@@ -4,6 +4,7 @@ import classes from './Contests.module.css'
 import BinaryImage from '../../assets/Binary.png'
 import DoublyLL from '../../assets/DoublyLL.png'
 import Hack4 from '../../assets/Hack4.png'
+import axios from 'axios'
 
 class Contests extends React.Component {
     state = {
@@ -14,6 +15,14 @@ class Contests extends React.Component {
         this.setState({
             ...this.state,
             show : text
+        })
+    }
+
+    componentDidMount(){
+        axios.get('http://13.234.145.69:8003/api/contest/',{
+
+        }).then(function(response){
+            console.log(response.data[0]);
         })
     }
 
