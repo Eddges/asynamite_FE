@@ -4,11 +4,19 @@ import classes from './Contests.module.css'
 import BinaryImage from '../../assets/Binary.png'
 import DoublyLL from '../../assets/DoublyLL.png'
 import Hack4 from '../../assets/Hack4.png'
+import axios from 'axios'
 
 class Contests extends React.Component {
-    state = {
-        show : 'active'
+    
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+             show: 'active',
+             contests:[]
+        }
     }
+    
 
     setShow = (text) => {
         this.setState({
@@ -16,6 +24,21 @@ class Contests extends React.Component {
             show : text
         })
     }
+
+
+    componentDidMount() {
+        axios.get('http://13.234.145.69:8003/api/contest/')
+             .then( res => {
+                 console.log(res);
+                 this.setState({contests : res.data})
+             })
+             .catch( error => {
+                 console.log(error)
+             })
+    }
+
+    
+
 
     render(){
         return(
@@ -37,6 +60,7 @@ class Contests extends React.Component {
                         <span className={this.state.show==='active' ? classes.ActiveNow :  classes.ActiveContest} onClick={() => this.setShow('active')}>Active</span>
                         <span>|</span>
                         <span className={this.state.show==='older' ? classes.ActiveNow :  classes.OlderContests} onClick={() => this.setShow('older')}>Older</span>
+                        {this.state.contests.length}
                     </div>
                 </div>
             </Layout>
