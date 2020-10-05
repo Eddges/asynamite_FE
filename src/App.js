@@ -8,6 +8,7 @@ import SignInPage from './Components/LoginRegister/Login/signin.component';
 import Register from './Components/LoginRegister/Register/register.component';
 import Results from './Components/Result/result.component';
 import Dashboard from './Components/DashBoard/dashboard.component';
+import ContestDetails from './Components/ContestDetails/ContestDetails';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Route path="/register" exact render={() =>  <Register/> } />
       <Route path="/results" exact render={() =>  <Results/> } />
       <Route path="/dashboard" exact render={() =>  <Dashboard/> } />
+      <Route path="/contest_details" exact render={() =>  <ContestDetails/> } />
     </React.Fragment>
   );
 }

@@ -1,0 +1,53 @@
+.Container{
+    // height : 320px;
+    width : 350px;
+    background-image: linear-gradient(to bottom, #d70015, #d62739);
+    border-radius : 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.33);
+    margin-top : 10px;
+    display : flex;
+    flex-direction: column;
+    padding : 20px 40px;
+    transition : all 0.2s;
+    text-decoration: none;
+    .Heading{
+        font-size : 1rem !important;
+        color : white;
+        font-weight: 600;
+        margin-top : 10px;
+    }
+    .Eligibility{
+        margin-top : 15px;
+        font-size : 0.8rem;
+        color : white;
+        font-weight: 500;
+    }
+    .FindMore{
+        border : none;
+        background-color: transparent;
+        color : white;
+        width : auto;
+        // padding : 2px;
+        padding : 0px;
+        width : 80px;
+        margin-top : 20px;
+        font-weight: 600;
+        text-decoration: underline;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .ImageDiv{
+        // display : flex;
+        // align-items: center;
+        // justify-content: center;
+        .Image{
+            width : 150px;
+        }
+    }
+    &:hover{
+        cursor: pointer;
+        transform: translateY(-2px);
+        // transform: scale(1%);
+    }
+}
