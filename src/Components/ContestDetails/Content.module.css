@@ -1,0 +1,130 @@
+.navigation_wrapper {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+    background-color:#0E30D6;    
+    /* margin-left: 20px; */
+
+
+}
+
+.Container {
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    /* flex-direction: column; */
+    background-color:  rgba(14, 48, 214);
+}
+
+.Container .left {
+    display: flex;
+    flex-basis: 50% ;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.Container .left .box {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    width: 60%;
+    /* border-right: 1px solid white; */
+
+
+}
+
+.Container .left .box .heading {
+    color: white;
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 55px;
+    margin-bottom: 5px;
+}
+
+.Container .left .box .organiser {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.Container .left .box .date {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.Container .left .box .team {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.Container .left .box .eligibility {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 30px;
+}
+
+.Container .left .box .eligibility .eligible {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.Container .left .box .eligibility .text {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+
+.Container .right {
+    display: flex;
+    flex-basis: 50%;
+    height: 100%;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.Container .right .box {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    width: 60%;
+    /* background-color: red; */
+}
+
+.Container .right .box .heading {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.Container .right .box .divider {
+    height: 1px;
+    width: 100%;
+    background-color: white;
+}
+
+.Container .right .box .details {
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 20px;
+    letter-spacing: 0.3px;
+    /* line-height: 36px; */
+}
+
+.Container .right .box button {
+    width: 150px;
+    height: 40px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: blue;
+    color: white;
+}

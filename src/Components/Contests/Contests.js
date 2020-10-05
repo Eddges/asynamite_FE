@@ -6,6 +6,7 @@ import DoublyLL from '../../assets/DoublyLL.png'
 import Hack4 from '../../assets/Hack4.png'
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import bg from '../../assets/code.png'
 
 class Contests extends React.Component {
     
@@ -52,16 +53,30 @@ class Contests extends React.Component {
                             
                             {this.state.contests.map( (contest, index) => 
                             
-                               <Link to = {`/contestPage/${index}`}> <div key = {contest.id} className = {classes.Highlighted} >
+                            <Link style = {{textDecoration:'none', color:'white'}} to = {`/contestPage/${index}`}> <div key = {contest.id} className = {classes.Highlighted} style = {{marginLeft:'20px'}} >
                                     <p className = {classes.heading}> {contest.contest_name} </p>
                                     <p> <span> {contest.start_date_time.split(' ')[0]} {contest.start_date_time.split(' ')[1]}  {contest.start_date_time.split(' ')[2]}</span> 
                                     -  <span> {contest.end_date_time.split(' ')[0]} {contest.end_date_time.split(' ')[1]}  {contest.end_date_time.split(' ')[2]}</span>
                                     
                                     </p>
+                                    <img src = {bg}/>
+                                
+                                    
                                 </div>
-                                </Link>
+                            </Link>
+                               
                                 
                             )}
+                    {/* //dummy card */}
+                    <div className = {classes.Highlighted} style = {{backgroundColor:'blue', marginLeft:'20px'}} >
+                                    <p className = {classes.heading}> Binary Challenge </p>
+                                    <p> 
+                                    Tue Oct 13 - Sat Oct 18
+                                    </p>
+                                    <img src = {bg}/>
+                                
+                                    
+                                </div>
                         </div>
                     </div>
 

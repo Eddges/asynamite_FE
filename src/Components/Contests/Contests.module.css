@@ -28,25 +28,31 @@
           justify-content: center;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
+  /* background-color: red; */
 }
 
-.Container .MainActive .Highlighted {
-  width: 40%;
+.Container .MainActive  .Highlighted {
+  width: 300px;
   padding: 20px;
   background-color: #D62839;
-  height: 65%;
+  height: 300px;
   border-radius: 15px;
   color: white;
 }
 
-.Container .MainActive .Highlighted .heading {
+.Container .MainActive  .Highlighted Link {
+  text-decoration: none;
+}
+
+.Container .MainActive .Highlighted  .heading {
   font-size: 25px;
   font-weight: 600;
   margin-top: 10px;
+  text-decoration: none;
 }
 
 .Container .MainActive .Highlighted img {
-  width: 100%;
+  width: 60%;
 }
 
 .Container .MainActive .List {
