@@ -4,9 +4,11 @@ import classes from './Contests.module.css'
 import BinaryImage from '../../assets/Binary.png'
 import DoublyLL from '../../assets/DoublyLL.png'
 import Hack4 from '../../assets/Hack4.png'
-import axios from 'axios'
+import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 class Contests extends React.Component {
+    
     
     constructor(props) {
         super(props)
@@ -15,6 +17,7 @@ class Contests extends React.Component {
              show: 'active',
              contests:[]
         }
+        // console.log(props)
     }
     
 
@@ -29,7 +32,7 @@ class Contests extends React.Component {
     componentDidMount() {
         axios.get('http://13.234.145.69:8003/api/contest/')
              .then( res => {
-                 console.log(res);
+                 console.log(res.data);
                  this.setState({contests : res.data})
              })
              .catch( error => {
@@ -46,13 +49,19 @@ class Contests extends React.Component {
                 <div className={classes.Container}>
                     <div className={classes.Cards}>
                         <div className={classes.MainActive} style={this.state.show==='active' ? null : {width : '0px', overflow : 'hidden'}}>
-                            <div className={classes.Highlighted}>
-                                <img src={BinaryImage} alt="Highlighted" />
-                            </div>
-                            <div className={classes.List}>
-                                <img src={DoublyLL} alt="Highlighted" />
-                                <img src={Hack4} alt="Highlighted" />
-                            </div>
+                            
+                            {this.state.contests.map( (contest, index) => 
+                            
+                               <Link to = {`/contestPage/${index}`}> <div key = {contest.id} className = {classes.Highlighted} >
+                                    <p className = {classes.heading}> {contest.contest_name} </p>
+                                    <p> <span> {contest.start_date_time.split(' ')[0]} {contest.start_date_time.split(' ')[1]}  {contest.start_date_time.split(' ')[2]}</span> 
+                                    -  <span> {contest.end_date_time.split(' ')[0]} {contest.end_date_time.split(' ')[1]}  {contest.end_date_time.split(' ')[2]}</span>
+                                    
+                                    </p>
+                                </div>
+                                </Link>
+                                
+                            )}
                         </div>
                     </div>
 
@@ -60,12 +69,14 @@ class Contests extends React.Component {
                         <span className={this.state.show==='active' ? classes.ActiveNow :  classes.ActiveContest} onClick={() => this.setShow('active')}>Active</span>
                         <span>|</span>
                         <span className={this.state.show==='older' ? classes.ActiveNow :  classes.OlderContests} onClick={() => this.setShow('older')}>Older</span>
-                        {this.state.contests.length}
+                       
                     </div>
                 </div>
             </Layout>
         )
     }
 }
+
+
 
 export default Contests

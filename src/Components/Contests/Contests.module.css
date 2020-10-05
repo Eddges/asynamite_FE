@@ -33,6 +33,16 @@
 .Container .MainActive .Highlighted {
   width: 40%;
   padding: 20px;
+  background-color: #D62839;
+  height: 65%;
+  border-radius: 15px;
+  color: white;
+}
+
+.Container .MainActive .Highlighted .heading {
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 .Container .MainActive .Highlighted img {
