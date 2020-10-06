@@ -17,7 +17,7 @@ class LandingPage extends React.Component {
     }
 
     showTrendingDetails = () => {
-        console.log('Clicked')
+        
     }
 
     componentDidMount() {

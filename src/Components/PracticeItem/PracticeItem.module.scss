@@ -38,6 +38,7 @@
         width : 25%;
         display : flex;
         font-size : 0.8rem;
+        cursor: pointer;
         span{
             background-color: #D62839;
             border-radius: 5px;
@@ -78,6 +79,10 @@
             width : auto;
             margin-left : 10px;
             margin-top : 10px;
+            cursor: pointer;
+            &:hover{
+                cursor: pointer;
+            }
         }
     }
 }

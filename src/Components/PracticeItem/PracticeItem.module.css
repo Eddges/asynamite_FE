@@ -59,6 +59,7 @@
   display: -ms-flexbox;
   display: flex;
   font-size: 0.8rem;
+  cursor: pointer;
 }
 
 .Container .CL span {
@@ -111,6 +112,10 @@
     width: auto;
     margin-left: 10px;
     margin-top: 10px;
+    cursor: pointer;
+  }
+  .Container .CL:hover {
+    cursor: pointer;
   }
 }
 /*# sourceMappingURL=PracticeItem.module.css.map */
