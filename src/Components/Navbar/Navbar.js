@@ -22,6 +22,7 @@ class Navbar extends React.Component{
         localStorage.removeItem('token')
     }
     render(){
+        console.log('Token ', this.props.user.token)
         return(
             <div className={classes.Container}>
                 <img className={classes.Logo} src={Logo} alt="Logo" />
@@ -38,10 +39,14 @@ class Navbar extends React.Component{
                         <span>PRACTICE</span>
                         <img src={Command} alt="Practice" />
                     </NavLink>
-                    <NavLink to="/dashboard" className={classes.MenuItem} activeClassName={classes.Active}>
+                    {
+                        this.props.user.token ?
+                        <NavLink to="/dashboard" className={classes.MenuItem} activeClassName={classes.Active}>
                         <span>DASHBOARD</span>
                         <img src={Dashboard} alt="Dashboard" />
-                    </NavLink>
+                        </NavLink> : null
+                    }
+                    
                     <NavLink to="/results" className={classes.MenuItem} activeClassName={classes.Active}>
                         <span>RESULTS</span>
                         <img src={Result} alt="Result" />
@@ -60,10 +65,14 @@ class Navbar extends React.Component{
                         <span>PRACTICE</span>
                         <img src={Command} alt="Practice" />
                     </NavLink>
-                    <NavLink to="/dashboard" className={classes.MenuItem} activeClassName={classes.Active}>
-                        <span>DASHBOARD</span>
-                        <img src={Dashboard} alt="Dashboard" />
-                    </NavLink>
+                    {
+                        this.props.user.token!==null ?
+                            <NavLink to="/dashboard" className={classes.MenuItem} activeClassName={classes.Active}>
+                            <span>DASHBOARD</span>
+                            <img src={Dashboard} alt="Dashboard" />
+                            </NavLink> : null
+                    }
+
                     <NavLink to="/results" className={classes.MenuItem} activeClassName={classes.Active}>
                         <span>RESULTS</span>
                         <img src={Result} alt="Result" />

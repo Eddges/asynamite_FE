@@ -1,6 +1,7 @@
 const initialState = {
     trending : null,
-    questions : null
+    questions : null,
+    results : null
 }
 
 const Funcs = (state = initialState, action) => {
@@ -16,6 +17,12 @@ const Funcs = (state = initialState, action) => {
             return{
                 ...state,
                 questions : action.payload
+            }
+        case 'SET_RESULTS' : 
+            console.log('Setting results : ', action.payload)
+            return{
+                ...state,
+                results : action.payload
             }
     }
     return state
