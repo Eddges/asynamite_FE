@@ -53,7 +53,7 @@ class Contests extends React.Component {
                             
                             {this.state.contests.map( (contest, index) => 
                             
-                            <Link style = {{textDecoration:'none', color:'white'}} to = {`/contestPage/${index}`}> <div key = {contest.id} className = {classes.Highlighted} style = {{marginLeft:'20px'}} >
+                            <Link key = {contest.id} style = {{textDecoration:'none', color:'white'}} to = {`/contestPage/${contest.id}`}> <div className = {classes.Highlighted} style = {{marginLeft:'20px'}} >
                                     <p className = {classes.heading}> {contest.contest_name} </p>
                                     <p> <span> {contest.start_date_time.split(' ')[0]} {contest.start_date_time.split(' ')[1]}  {contest.start_date_time.split(' ')[2]}</span> 
                                     -  <span> {contest.end_date_time.split(' ')[0]} {contest.end_date_time.split(' ')[1]}  {contest.end_date_time.split(' ')[2]}</span>

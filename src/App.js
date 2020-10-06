@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from './Components/Layout/Layout';
 import {Route} from 'react-router-dom'
 import Contests, { contestPage } from './Components/Contests/Contests';
 import LandingPage from './Components/LandingPage/LandingPage.component';
