@@ -7,7 +7,15 @@ import {connect} from 'react-redux'
 
 class Practice extends React.Component{
     state = {
-        displayQuestions : false
+        displayQuestions : false,
+        difficulty : 'Easy'
+    }
+
+    changeDifficulty = e => {
+        this.setState({
+            ...this.state,
+            difficulty : e.target.value
+        })
     }
 
     componentDidMount() {
@@ -31,10 +39,10 @@ class Practice extends React.Component{
                             <input type="text" placeholder="Search" />
                         </div>
                         <div className={classes.Controls}>
-                            <select className={classes.SelectBorder}>
-                                <option>EASY</option>
-                                <option>MEDIUM</option>
-                                <option>HARD</option>
+                            <select className={classes.SelectBorder} onChange={this.changeDifficulty}>
+                                <option>Easy</option>
+                                <option>Medium</option>
+                                <option>Hard</option>
                             </select>
                             <select className={classes.SelectBorder}>
                                 <option>TODO</option>
@@ -57,19 +65,13 @@ class Practice extends React.Component{
                     <div className={classes.PracticeList}>
                     {
                         this.props.func.questions && 
-                        this.props.func.questions.map((iterator, index) => 
-                            <PracticeItem {...iterator} key={index} />
+                        this.props.func.questions.map((iterator, index) => {
+                            if(iterator.fields.difficulty===this.state.difficulty) {
+                                return <PracticeItem {...iterator} key={index} />
+                            }
+                        }   
                         )
-                        
-
                     }
-                        
-                        {/* <PracticeItem />
-                        <PracticeItem />
-                        <PracticeItem />
-                        <PracticeItem />
-                        <PracticeItem />
-                        <PracticeItem /> */}
                     </div>
                 </div>
             </Layout>
