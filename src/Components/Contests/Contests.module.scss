@@ -15,10 +15,29 @@
         justify-content: center;
         transition : all 0.1s;
         .Highlighted{
-            width : 40%;
-            padding : 20px;
+            width: 300px;
+            height: 300px;
+            border-radius: 15px;
+            color: white;
+            background-color: #D62839;
+            align-items: center;
+
             img{
-                width : 100%;
+                width : 40%;
+                margin-left: 20px;
+            }
+
+            .heading {
+                font-size: 25px;
+                font-weight: 600;
+                margin-left: 20px;
+                padding-top: 20px;
+            }
+
+            .date {
+                margin-left: 20px;
+                font-size: 15px;
+
             }
         }
         .List{

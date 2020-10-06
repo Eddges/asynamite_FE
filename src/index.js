@@ -6,11 +6,13 @@ import {createStore, combineReducers} from 'redux'
 import {BrowserRouter} from 'react-router-dom'
 import Funcs from './Reducers/Funcs';
 import User from './Reducers/User';
+
 import { Provider } from 'react-redux';
 
 const rootReducer = combineReducers({
   func : Funcs,
-  usr : User
+  usr : User,
+  
 })
 
 const store = createStore(rootReducer)

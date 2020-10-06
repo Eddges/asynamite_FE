@@ -55,7 +55,7 @@ class Contests extends React.Component {
                             
                             <Link key = {contest.id} style = {{textDecoration:'none', color:'white'}} to = {`/contestPage/${contest.id}`}> <div className = {classes.Highlighted} style = {{marginLeft:'20px'}} >
                                     <p className = {classes.heading}> {contest.contest_name} </p>
-                                    <p> <span> {contest.start_date_time.split(' ')[0]} {contest.start_date_time.split(' ')[1]}  {contest.start_date_time.split(' ')[2]}</span> 
+                                    <p className = {classes.date}> <span> {contest.start_date_time.split(' ')[0]} {contest.start_date_time.split(' ')[1]}  {contest.start_date_time.split(' ')[2]}</span> 
                                     -  <span> {contest.end_date_time.split(' ')[0]} {contest.end_date_time.split(' ')[1]}  {contest.end_date_time.split(' ')[2]}</span>
                                     
                                     </p>
@@ -70,7 +70,7 @@ class Contests extends React.Component {
                     {/* //dummy card */}
                     <div className = {classes.Highlighted} style = {{backgroundColor:'blue', marginLeft:'20px'}} >
                                     <p className = {classes.heading}> Binary Challenge </p>
-                                    <p> 
+                                    <p className = {classes.date}> 
                                     Tue Oct 13 - Sat Oct 18
                                     </p>
                                     <img src = {bg}/>
