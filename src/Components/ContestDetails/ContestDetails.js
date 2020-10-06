@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import classes from './Content.module.css'
-import {connect} from 'react-redux'
 import axios from 'axios';
 import {NavLink} from 'react-router-dom';
 import * as BsIcons from 'react-icons/bs';
@@ -25,10 +24,19 @@ export class ContestDetails extends Component {
         axios.get('http://13.234.145.69:8003/api/contest/')
              .then(res => {
                 //  console.log(res.data[this.state.contestId].contest_name);
-                 this.setState({
-                     contestDetail: res.data[this.state.contestId]
-                 })
-                 console.log(this.state.contestDetail)
+                //  this.setState({
+                //      contestDetail: res.data[this.state.contestId]
+                //  })
+                //  console.log(this.state.contestDetail)
+                const contestId = this.state.contestId;
+                console.log(contestId)
+                console.log( res.data.find(item => item.id == contestId));
+                this.setState({
+                    contestDetail:res.data.find(item => item.id == contestId)
+                })
+
+
+
              })
     }
 
