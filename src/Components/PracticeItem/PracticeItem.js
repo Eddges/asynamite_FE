@@ -7,7 +7,7 @@ const PracticeItem = (props) => {
             <span className={classes.Hash}>{props.fields.problem_code}</span>
             <div className={classes.Title}><span>{props.fields.problem_name}</span></div>
             <div className={classes.Difficulty}><span>{props.fields.difficulty}</span></div>
-            <div className={classes.CL}><span>Start Collaborative Learning</span></div>
+            <button className={classes.CL}>Start Collaborative Learning</button>
         </div>
     )
 }

@@ -121,10 +121,11 @@
 
 .Container .right .box button {
     width: 150px;
-    height: 40px;
+    min-height: 40px;
     margin-top: 30px;
     margin-bottom: 10px;
     border: none;
     background-color: blue;
     color: white;
+    cursor: pointer;
 }

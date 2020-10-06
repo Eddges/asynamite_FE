@@ -36,14 +36,15 @@
     }
     .CL{
         width : 25%;
-        display : flex;
+        // display : flex;
         font-size : 0.8rem;
         cursor: pointer;
-        span{
-            background-color: #D62839;
-            border-radius: 5px;
-            padding : 4px 15px;
-        }
+        background-color: #D62839;
+        border : none;
+        border-radius: 5px;
+        padding : 5px 0px;
+        color : white;
+        width : 200px;
     }
 }
 

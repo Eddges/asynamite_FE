@@ -4,7 +4,7 @@ import axios from 'axios';
 import {NavLink} from 'react-router-dom';
 import * as BsIcons from 'react-icons/bs';
 import Logo from '../../assets/Logo.png'
-
+import {connect} from 'react-redux'
 
 
 
@@ -20,24 +20,42 @@ export class ContestDetails extends Component {
         }
     }
 
+    handleRegister = () => {
+        console.log('ContestID : ', this.state.contestId)
+        console.log('UserID : ', this.props.user.userId)
+        axios.post('http://13.234.145.69:8003/api/registerContest', {
+            data : {
+                'contest_id' : `${this.state.contestId}`,
+                'user_id' : `${this.props.user.userId}`
+            },
+            headers : {
+                'Authorization' : `Token ${this.props.user.token}`
+            }
+        })
+        .then(res => {
+            console.log('Registration response : ', res.data)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }
+
     componentDidMount(){
         axios.get('http://13.234.145.69:8003/api/contest/')
-             .then(res => {
-                //  console.log(res.data[this.state.contestId].contest_name);
-                //  this.setState({
-                //      contestDetail: res.data[this.state.contestId]
-                //  })
-                //  console.log(this.state.contestDetail)
-                const contestId = this.state.contestId;
-                console.log(contestId)
-                console.log( res.data.find(item => item.id == contestId));
-                this.setState({
-                    contestDetail:res.data.find(item => item.id == contestId)
-                })
-
-
-
-             })
+            .then(res => {
+            //  console.log(res.data[this.state.contestId].contest_name);
+            //  this.setState({
+            //      contestDetail: res.data[this.state.contestId]
+            //  })
+            //  console.log(this.state.contestDetail)
+            const contestId = this.state.contestId;
+            console.log(contestId)
+            console.log( res.data.find(item => item.id == contestId));
+            this.setState({
+                contestDetail:res.data.find(item => item.id == contestId)
+            })
+        })
+        console.log('User token : ', this.props.user.token)
     }
 
 
@@ -76,7 +94,7 @@ export class ContestDetails extends Component {
                     <p className = {classes.heading}> Details </p>
                     <div className = {classes.divider}></div>
                     <p className = {classes.details}> {this.state.contestDetail.details} </p>
-                    <button> Regiter </button>
+                    <button onClick={this.handleRegister}> Regiter </button>
                 </div>
             </div>
         </div>
@@ -85,7 +103,14 @@ export class ContestDetails extends Component {
     }
 }
 
-export default ContestDetails
+const mapStateToProps = state => {
+    return{
+        user : state.usr,
+        func : state.func
+    }
+}
+
+export default connect(mapStateToProps)(ContestDetails)
 
 
 

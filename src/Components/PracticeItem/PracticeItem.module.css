@@ -55,17 +55,14 @@
 
 .Container .CL {
   width: 25%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   font-size: 0.8rem;
   cursor: pointer;
-}
-
-.Container .CL span {
   background-color: #D62839;
+  border: none;
   border-radius: 5px;
-  padding: 4px 15px;
+  padding: 5px 0px;
+  color: white;
+  width: 200px;
 }
 
 @media (max-width: 576px) {

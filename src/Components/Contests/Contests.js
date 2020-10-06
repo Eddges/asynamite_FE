@@ -26,6 +26,8 @@ class Contests extends React.Component {
         this.setState({
             ...this.state,
             show : text
+        }, () => {
+            console.log('State : ', this.state)
         })
     }
 
@@ -39,6 +41,8 @@ class Contests extends React.Component {
              .catch( error => {
                  console.log(error)
              })
+        // console.log(Date.parse('01/01/2011 10:20:45') < Date.parse('01/01/2011 5:10:10'))
+        console.log(new Date())
     }
 
     
@@ -49,21 +53,27 @@ class Contests extends React.Component {
             <Layout>
                 <div className={classes.Container}>
                     <div className={classes.Cards}>
+                    {/* <div className={classes.MainActive} style={this.state.show==='active' ? null : {width : '0px', overflow : 'hidden'}}></div> */}
+                    {
+                        this.state.show==='active' && 
                         <div className={classes.MainActive} style={this.state.show==='active' ? null : {width : '0px', overflow : 'hidden'}}>
                             
-                            {this.state.contests.map( (contest, index) => 
+                            {this.state.contests.map( (contest, index) => {
+                                if(Date.parse(contest.end_date_time) >= new Date())
+                                return(
+                                    <Link key = {contest.id} style = {{textDecoration:'none', color:'white'}} to = {`/contestPage/${contest.id}`}> <div className = {classes.Highlighted} style = {{marginLeft:'20px'}} >
+                                        <p className = {classes.heading}> {contest.contest_name} </p>
+                                        <p className = {classes.date}> <span> {contest.start_date_time.split(' ')[0]} {contest.start_date_time.split(' ')[1]}  {contest.start_date_time.split(' ')[2]}</span> 
+                                        -  <span> {contest.end_date_time.split(' ')[0]} {contest.end_date_time.split(' ')[1]}  {contest.end_date_time.split(' ')[2]}</span>
+                                        
+                                        </p>
+                                        <img src = {bg}/>
+                                        </div>
+                                    </Link>
+                                )
+                            }
                             
-                            <Link key = {contest.id} style = {{textDecoration:'none', color:'white'}} to = {`/contestPage/${contest.id}`}> <div className = {classes.Highlighted} style = {{marginLeft:'20px'}} >
-                                    <p className = {classes.heading}> {contest.contest_name} </p>
-                                    <p className = {classes.date}> <span> {contest.start_date_time.split(' ')[0]} {contest.start_date_time.split(' ')[1]}  {contest.start_date_time.split(' ')[2]}</span> 
-                                    -  <span> {contest.end_date_time.split(' ')[0]} {contest.end_date_time.split(' ')[1]}  {contest.end_date_time.split(' ')[2]}</span>
-                                    
-                                    </p>
-                                    <img src = {bg}/>
                                 
-                                    
-                                </div>
-                            </Link>
                                
                                 
                             )}
@@ -78,6 +88,41 @@ class Contests extends React.Component {
                                     
                                 </div>
                         </div>
+                    }
+
+
+                    {
+                        this.state.show==='older' && 
+                        <div className={classes.MainActive} style={this.state.show==='older' ? null : {width : '0px', overflow : 'hidden'}}>
+                            
+                            {this.state.contests.map( (contest, index) => {
+                                console.log('Older, comparing', contest.end_date_time < new Date())
+                                if(Date.parse(contest.end_date_time) < new Date()) {
+                                    return(
+                                        <Link key = {contest.id} style = {{textDecoration:'none', color:'white'}} to = {`/contestPage/${contest.id}`}> <div className = {classes.Highlighted} style = {{marginLeft:'20px'}} >
+                                            <p className = {classes.heading}> {contest.contest_name} </p>
+                                            <p className = {classes.date}> <span> {contest.start_date_time.split(' ')[0]} {contest.start_date_time.split(' ')[1]}  {contest.start_date_time.split(' ')[2]}</span> 
+                                            -  <span> {contest.end_date_time.split(' ')[0]} {contest.end_date_time.split(' ')[1]}  {contest.end_date_time.split(' ')[2]}</span>
+                                            
+                                            </p>
+                                            <img src = {bg}/>
+                                        </div>
+                                        </Link>
+                                        )
+                                }
+                                
+                            }
+                            
+                            
+                               
+                                
+                            )}
+                        </div>
+                    }
+                        
+
+                        
+                        
                     </div>
 
                     <div className={classes.Switch}>
