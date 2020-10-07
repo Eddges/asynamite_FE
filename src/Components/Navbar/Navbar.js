@@ -6,7 +6,7 @@ import Command from '../../assets/Command.png'
 import Dashboard from '../../assets/Dashboard.png'
 import Result from '../../assets/Result.png'
 import Trophy from '../../assets/Trophy.png'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Redirect } from 'react-router-dom'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
 
@@ -20,6 +20,7 @@ class Navbar extends React.Component{
         localStorage.removeItem('phone')
         localStorage.removeItem('userId')
         localStorage.removeItem('token')
+       
     }
     render(){
         return(

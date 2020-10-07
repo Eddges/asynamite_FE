@@ -5,6 +5,7 @@ import profilelogo from '../../assets/Ellipse.png';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom'
 import axios from 'axios';
+import * as FaIcons from 'react-icons/fa';
 
 
 
@@ -23,10 +24,11 @@ class Dashboard extends React.Component{
     componentDidMount() {
         axios.get('http://13.234.145.69:8003/api/scheduleInterview/')
              .then(res => {
-                 console.log(res.data[1])
+                //  console.log(res.data[1])
                  this.setState({
                      interview_Schedule: res.data
                  })
+                 console.log( 'interview', this.state.interview_Schedule);
              })
     }
     
@@ -42,7 +44,7 @@ class Dashboard extends React.Component{
                     <div className = {styles.profile_content}>
                         <div className = {styles.profile}>
                             <img src={profilelogo} alt=""/>
-                            <p className = {styles.name} >John Doe</p>
+                            <p className = {styles.name} > {this.props.user.userName} </p>
                             <p className = {styles.desig}>Student</p>
                             <button>Edit</button>
                         </div>
@@ -64,7 +66,23 @@ class Dashboard extends React.Component{
                              <p>Interview Schedule</p>
                          </div>
                          <div className = {styles.data}>
-                             {/* data from api */}
+                             {
+                                 this.state.interview_Schedule === ''?
+                                 <div>
+                                     {
+                                         this.state.interview_Schedule.map(data => 
+                                                <div key = {data.userName}> 
+                                                </div>
+                                         )
+                                     }
+                                 </div> :
+                                 <div className = {styles.no_data_wrapper}>
+                                     <div className = {styles.no_data}>
+                                         <FaIcons.FaRegCalendarTimes style = {{color:'white', fontSize:'50px', opacity:0.5}} />
+                                        <p className = {styles.text}> No Schedule Yet </p>
+                                     </div>
+                                 </div>
+                             }
                          </div>
                      </div>
                  </div>
