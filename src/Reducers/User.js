@@ -23,7 +23,7 @@ const User = (state = initialState, action) => {
                 userName : action.payload.userName,
                 email : action.payload.email,
                 userId : action.payload.userId,
-                phone : action.payload.phone,
+                name : action.payload.name,
                 token : action.payload.token
             }
         case 'HANDLE_SIGNOUT' : 

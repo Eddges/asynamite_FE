@@ -26,6 +26,7 @@ class RegisterForm extends React.Component{
                 userName : e.target.value
             }
         })
+        console.log(this.state.user.userName)
     }
     changeEmail = e => {
         this.setState({
