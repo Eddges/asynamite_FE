@@ -11,7 +11,7 @@ class RegisterForm extends React.Component{
             userName : '',
             email : '',
             userId : '',
-            phone : '',
+            name : '',
             token : ''
         },
         password : '',
@@ -41,7 +41,7 @@ class RegisterForm extends React.Component{
             ...this.state,
             user : {
                 ...this.state.user,
-                phone : e.target.value
+                name : e.target.value
             }
         })
     }
@@ -65,19 +65,19 @@ class RegisterForm extends React.Component{
             "username" : `${this.state.user.userName}`,
             'email' : `${this.state.user.email}`,
             'password' : `${this.state.password}`,
-            'first_name' : `${this.state.user.phone}`
+            'first_name' : `${this.state.user.name}`
         })
         .then((res) => {
             console.log('Axios request response ', res.data)
             localStorage.setItem('userName', res.data.user.username)
             localStorage.setItem('userId', res.data.user.id)
             localStorage.setItem('email', res.data.user.email)
-            localStorage.setItem('phone', res.data.user.first_name)
+            localStorage.setItem('name', res.data.user.first_name)
             localStorage.setItem('token', res.data.token)
             this.props.assignUser({
                 userName : res.data.user.username,
                 userId : res.data.user.id,
-                phone : res.data.user.first_name,
+                name : res.data.user.first_name,
                 email : res.data.user.email,
                 token : res.data.token
             })
@@ -99,7 +99,7 @@ class RegisterForm extends React.Component{
                        <form onSubmit={this.handleSubmit}>
                            <input type="text" placeholder = "username_" onChange={this.changeUserName} value={this.state.user.userName} />
                            <input type = "text" placeholder = "email_" onChange={this.changeEmail} value={this.state.user.email} />
-                           <input type = "text" placeholder = "phone_" onChange={this.changePhone} value={this.state.user.phone} />
+                           <input type = "text" placeholder = "name_" onChange={this.changePhone} value={this.state.user.name} />
                            <input type = "password" placeholder = "password_" onChange={this.changePassword} value={this.state.password} />
                            <input type = "password" placeholder = "confirm_password_" onChange={this.changeConfirmPassword} value={this.state.confirmPassword} />
                            <button>Sign Up</button>

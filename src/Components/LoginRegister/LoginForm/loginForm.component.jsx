@@ -35,15 +35,16 @@ class LoginForm extends React.Component {
             console.log('Login response : ', res.data)
             localStorage.setItem('userName', res.data.user.username)
             localStorage.setItem('email', res.data.user.email)
-            localStorage.setItem('phone', res.data.user.first_name)
+            localStorage.setItem('name', res.data.user.first_name)
             localStorage.setItem('userId', res.data.user.id)
             localStorage.setItem('token', res.data.token)
             this.props.assignUser({
                 userName : res.data.user.username,
                 email : res.data.user.email,
-                phone : res.data.user.first_name,
+                name : res.data.user.first_name,
                 userId : res.data.user.id,
-                token : res.data.token
+                token : res.data.token,
+                
             })
             this.props.history.push('/')
         })

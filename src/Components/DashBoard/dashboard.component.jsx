@@ -44,7 +44,7 @@ class Dashboard extends React.Component{
                     <div className = {styles.profile_content}>
                         <div className = {styles.profile}>
                             <img src={profilelogo} alt=""/>
-                            <p className = {styles.name} > {this.props.user.userName} </p>
+                            <p className = {styles.name} > {this.props.user.name} </p>
                             <p className = {styles.desig}>Student</p>
                             <button>Edit</button>
                         </div>
