@@ -20,6 +20,8 @@ class Navbar extends React.Component{
         localStorage.removeItem('phone')
         localStorage.removeItem('userId')
         localStorage.removeItem('token')
+        this.props.history.push('/')
+
        
     }
     render(){
