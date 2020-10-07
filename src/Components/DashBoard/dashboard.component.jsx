@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom'
 import axios from 'axios';
 import * as FaIcons from 'react-icons/fa';
+import Portal from '../EditPortal/Portal';
 
 
 
@@ -46,7 +47,7 @@ class Dashboard extends React.Component{
                             <img src={profilelogo} alt=""/>
                             <p className = {styles.name} > {this.props.user.name} </p>
                             <p className = {styles.desig}>Student</p>
-                            <button>Edit</button>
+                            <button> <Portal/> </button>
                         </div>
                     </div>
                 </div>
